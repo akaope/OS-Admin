@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+	<title>OS Admin - Opestudio</title>
+    <!-- CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>  
+	<link href="assets/plugins/DataTables/DataTables-1.10.13/css/jquery.dataTables.min.css" rel="stylesheet"/>      
+    <link rel="stylesheet" type="text/css" href="assets/libs/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/libs/css/login.style.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugins/hover/css/hover.css">            
+    <style>
+		.dataTables_filter input[type="search"] {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			height: 30px;
+		}
+		.dataTables_filter input[type="search"]:focus {
+			background-color: #fff;
+			-webkit-transition: all 0.30s ease-in-out;
+			-moz-transition: all 0.30s ease-in-out;
+			-ms-transition: all 0.30s ease-in-out;
+			-o-transition: all 0.30s ease-in-out;
+			border: 1px solid rgb(133, 182, 255);
+		}
+	</style>    
+</head>
+<body>
+    <div class="o-container">
+        <aside class="sidebar">
+            <div class="sidebar-head">                
+                    AdminPanel                
+            </div>
+            <section class="sidebar-menu">
+            <ul class="sidebar-list-menu" id="accordion">
+                <!--<li class="list-head">Head</li>-->
+                <li><a href='#'><i class="fa fa-university"></i> Dashboard</a></li>                
+                <li><a id="collapse-menu" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-bar-chart"></i> Collapse Menu <i class="fa fa-angle-right pull-right"></i></a>
+                    <ul id="collapseOne" class="panel-collapse collapse">
+                        <li><a href='#'><i class="fa fa-bar-chart"></i> Child</a>
+                        <li><a href='#'><i class="fa fa-bar-chart"></i> Child</a>
+                    </ul>
+                </li>
+                <li><a id="collapse-menu" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-bar-chart"></i> Collapse Menu <i class="fa fa-angle-right pull-right"></i></a>
+                    <ul id="collapseTwo" class="panel-collapse collapse">
+                        <li><a href='#'><i class="fa fa-bar-chart"></i> Child</a>
+                        <li><a href='#'><i class="fa fa-bar-chart"></i> Child</a>
+                    </ul>
+                </li>
+                <li><a href='#'><i class="fa fa-envelope-o"></i> Pesan <span class="label label-primary pull-right bg-red">4</span></a></li>                               
+            </ul>
+            </section>
+
+        </aside>
+        <div class="main">              
+            <div class="content-top">
+                <div class="content-top-left">
+                    <h1>Dashboard</h1>
+<!--                    <small>Ini halaman dashboard</small>-->
+                </div>
+                <div class="content-top-right">
+                    <ul>
+                        <li class="parent-menu"><a href="#">Inbox</a></li>
+                        <li class="parent-menu"><a href="#">Username</a></li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="o-row">
+                    <div class="box-3 box-blue">
+                        box
+                    </div>
+                    <div class="box-3 box-red">
+                        box
+                    </div>
+                    <div class="box-3 box-green">
+                        box
+                    </div>
+                </div> 
+                
+                <div class="o-row">
+                    <div class="o-panel lg-width colored-blue non-bordered">
+                        <div class="o-panel-header">
+                            header
+							<div class="header-btn">
+								<button class="btn btn-sm btn-header-bg" data-widget="remove"><i class="fa fa-times"></i></button>
+							</div>
+                        </div>
+                        <div class="o-panel-body">
+                            <div class="table-responsive table-full">
+								<table id="tableList" class="otable-full table table-stripped table-hover table-bordered">
+									<thead>
+										<tr>
+											<th class="text-center">Kode Barang</th>
+											<th class="text-center">NamaKode Barang</th>
+											<th class="text-center">Warna Barang</th>
+											<th class="text-center text-nowrap">Qty</th>											
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td>BRG0001</td>
+                                            <td>Barang 1</td>
+                                            <td>Merah</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BRG0002</td>
+                                            <td>Barang 2</td>
+                                            <td>Merah</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BRG0003</td>
+                                            <td>Barang 3</td>
+                                            <td>Merah</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BRG0004</td>
+                                            <td>Barang 4</td>
+                                            <td>Merah</td>
+                                            <td>9</td>
+                                        </tr>										                          
+									</tbody>
+								</table>
+							</div>
+                        </div>   
+                        <div class="o-panel-footer">
+                            footer
+                        </div>                     
+                    </div>                    
+                </div>  
+            </div>                              
+        </div>
+    </div>
+
+<!-- Javascript -->
+<script src="assets/plugins/jquery/jquery-3.2.0.min.js"></script>
+<script src="assets/plugins/DataTables/jQueryUI-1.11.4/jquery-ui.min.js"></script>
+<script src="assets/plugins/DataTables/DataTables-1.10.13/js/jquery.dataTables.min.js"></script> 
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script>
+   $(function(){
+	   // get(); 
+       $('body').on('click', '#collapse-menu', function() {
+			if(!$(this).hasClass('active')){
+				$('.collapse').collapse('hide');
+				$("a",$(this).parents("ul:first")).removeClass(' active');           
+				
+				$(this).next('ul').collapse('show');
+				$(this).addClass(' active');  
+			} else {
+				$(this).removeClass(' active');
+				$(this).next('ul').collapse('hide');
+			}                     
+       });                
+   });   
+</script>
+</body>
+</html>
