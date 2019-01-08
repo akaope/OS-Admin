@@ -1,1 +1,1 @@
-# OS-Admin
+# Dashboard Template
